@@ -1,0 +1,13 @@
+name = "Box"
+uuid = "247ae7ab-d1b9-4f88-8529-b44b862cffa0"
+authors = ["mathutopia <mathutopia@163.com> and contributors"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.5"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
