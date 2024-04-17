@@ -1,7 +1,7 @@
 name = "Box"
 uuid = "247ae7ab-d1b9-4f88-8529-b44b862cffa0"
 authors = ["mathutopia <mathutopia@163.com> and contributors"]
-version = "1.0.0-DEV"
+version = "1.0.0"
 
 [deps]
 Markdown = "d6f4376e-aef5-505a-96c1-9c027394607a"
