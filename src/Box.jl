@@ -18,5 +18,8 @@ export print_subtypes, print_supertypes, -->
 testmess() = "testmessage"
 export testmess
 
+test2() = "test2"
+export test2
+
 end
 
