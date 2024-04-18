@@ -15,5 +15,8 @@ export timu, shiyan, renwu
 include("utils.jl")
 export print_subtypes, print_supertypes, -->
 
+testmess() = "testmessage"
+export testmess
+
 end
 
