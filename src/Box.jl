@@ -21,5 +21,8 @@ export testmess
 test2() = "test2"
 export test2
 
+testmain() = "testmain"
+export testmain
+
 end
 
