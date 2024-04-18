@@ -2,7 +2,7 @@ using Markdown
 # =================练习========================
 struct Exercise{C}
     content::C
-	end
+end
 
 exerstyle = """
 <style>
@@ -58,7 +58,7 @@ function Base.show(io, mime::MIME"text/html", ex::Title)
     write(io,"</div>")
 end
 
-function extitle(str::Markdown.MD)
+function shiyan(str::Markdown.MD)
 	Title(str)
 end
 
