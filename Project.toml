@@ -1,7 +1,7 @@
 name = "Box"
 uuid = "247ae7ab-d1b9-4f88-8529-b44b862cffa0"
 authors = ["mathutopia <mathutopia@163.com> and contributors"]
-version = "1.0.2"
+version = "1.0.3"
 
 [deps]
 HypertextLiteral = "ac1192a8-f4b3-4bfe-ba22-af5b92cd3ab2"
