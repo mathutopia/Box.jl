@@ -16,7 +16,10 @@ include("utils.jl")
 export print_subtypes, print_supertypes, -->
 
 include("html.jl")
-export hline
+export hline, maketoc
+
+include("styles.jl")
+export setcss
 
 end
 
