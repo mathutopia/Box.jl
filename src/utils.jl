@@ -86,8 +86,8 @@ end
 const INFO = md"""
 本文件中用到了一个自编的包Box.jl。由于该包没有在公共注册中心注册， 想要使用该包， 需要先安装一个本地的注册中心。方法很简单， 只需要在REPL中执行下面两行代码即可。
 ```julia
-using Pkg
-Pkg.Registry.add(RegistrySpec(url = "https://github.com/mathutopia/Wlreg.git"))
+julia> using Pkg
+julia> Pkg.Registry.add(RegistrySpec(url = "https://github.com/mathutopia/Wlreg.git"))
 ```
 由于安装本地注册中心需要连接github， 如果网络连接不成功可以多次尝试。直到在REPL中， 输入如下语句， 看到Wlreg就表示注册中心安装成功了。 下面是我本地机器返回的结果。
 ```julia
