@@ -1,14 +1,14 @@
 name = "Box"
 uuid = "247ae7ab-d1b9-4f88-8529-b44b862cffa0"
 authors = ["mathutopia <mathutopia@163.com> and contributors"]
-version = "1.0.6"
+version = "1.0.7"
 
 [deps]
 HypertextLiteral = "ac1192a8-f4b3-4bfe-ba22-af5b92cd3ab2"
 Markdown = "d6f4376e-aef5-505a-96c1-9c027394607a"
 
 [compat]
-julia = "1.5"
+julia = "1.9"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
