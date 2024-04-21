@@ -23,4 +23,6 @@ testa() = "testa message"
 
 testb()="testb message"
 
+testc() = "testc message"
+
 end
