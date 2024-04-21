@@ -25,7 +25,7 @@ start_num(str) = match(r"[\d]+", str).match
 fname(str) =  str[1:end-3]
 
 function biaoti(str::Markdown.MD)
-	bt = match(r"#.*\n",string(ss)).match
+	bt = match(r"#.*\n",string(str)).match
 	bt = strip(bt, ['\n','#',' '])
 	bt = replace(bt, [' ', ':','_'] => '-')
 

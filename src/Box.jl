@@ -12,7 +12,7 @@ include("utils.jl")
 export print_subtypes, print_supertypes, -->, INFO
 
 include("html.jl")
-export hline, maketoc
+export drawline, maketoc
 
 include("styles.jl")
 export setcss

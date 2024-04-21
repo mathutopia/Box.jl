@@ -2,7 +2,7 @@ using HypertextLiteral
 
 # 这里是一些html元素
 
-function hline( linewidth::Integer = 2 ,color::Union{String, Symbol} = "black")
+function drawline( linewidth::Integer = 2 ,color::Union{String, Symbol} = "black")
 	color = isa(color, Symbol) ? string(color) : color
     @htl """
 
@@ -18,8 +18,8 @@ function hline( linewidth::Integer = 2 ,color::Union{String, Symbol} = "black")
 """
 end
 
-hline(color::Union{String, Symbol}) = hline(2, color)
-hline(color::Union{String, Symbol}, n::Integer) = hline(n, color)
+drawline(color::Union{String, Symbol}) = hline(2, color)
+drawline(color::Union{String, Symbol}, n::Integer) = hline(n, color)
 
 
 
