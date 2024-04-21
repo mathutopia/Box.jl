@@ -10,7 +10,7 @@ include("foldable.jl")
 export fbox
 
 include("exer.jl")
-export timu, shiyan, renwu
+export timu, shiyan, renwu,section
 
 include("utils.jl")
 export print_subtypes, print_supertypes, -->

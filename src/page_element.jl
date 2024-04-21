@@ -49,15 +49,20 @@ function Base.show(io, mime::MIME"text/html", ex::Section)
 end
 
 function section(str::Markdown.MD)
-	bt = match(r"#.*\n",string(ss)).match
+	bt = match(r"#.*\n",string(str)).match
 	bt = strip(bt, ['\n','#',' '])
 	bt = replace(bt, [' ', ':','_'] => '-')
+
+	filename() = match(r".*\.jl",  basename(@__FILE__)).match
+	updirname() = split(@__DIR__, "\\")[end]
+	start_num(str) = match(r"[\d]+", str).match
+	fname(str) =  str[1:end-3]
 
 	fn = filename()
 	
 	
 	if occursin("backup", fn)
-		return str
+		return Section(str)
 	end
 
 	chapter = updirname()
@@ -89,3 +94,22 @@ function renwu(str::Markdown.MD)
 	Task(str)
 end
 
+
+# =================折叠框========================
+struct Foldable{C}
+    title::String
+    content::C
+end
+
+
+	
+function Base.show(io, mime::MIME"text/html", fld::Foldable)
+
+	write(io,"""<details><summary>$(fld.title)</summary><p>""")
+    show(io, mime, fld.content)
+    write(io,"</p></details>")
+end
+
+function fbox(str::Markdown.MD, title = "参考答案")
+	Foldable(title,str)
+end
