@@ -17,4 +17,5 @@ export drawline, maketoc
 include("styles.jl")
 export setcss
 
+testb()="testb message"
 end
