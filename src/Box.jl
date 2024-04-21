@@ -5,12 +5,8 @@ module Box
 include("boxs.jl")
 export box
 
-
-include("foldable.jl")
-export fbox
-
-include("exer.jl")
-export timu, shiyan, renwu,section
+include("page_element.jl")
+export timu, shiyan, renwu,section, fbox
 
 include("utils.jl")
 export print_subtypes, print_supertypes, -->
@@ -22,4 +18,3 @@ include("styles.jl")
 export setcss
 
 end
-
