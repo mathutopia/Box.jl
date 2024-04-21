@@ -83,7 +83,7 @@ function maketoc(git="https://mathutopia.github.io")
 end
 
 
-info() = @htl("""
+const INFO = md"""
 本文件中用到了一个自编的包Box.jl。由于该包没有在公共注册中心注册， 想要使用该包， 需要先安装一个本地的注册中心。方法很简单， 只需要在REPL中执行下面两行代码即可。
 ```julia
 using Pkg
@@ -97,4 +97,4 @@ Registry Status
  [84dc1479] Wlreg (https://github.com/mathutopia/Wlreg.git)
  [23338594] General (https://github.com/JuliaRegistries/General.git)
 ```
-""")
+"""
