@@ -45,7 +45,8 @@ function biaoti(str::Markdown.MD)
 end
 
 
-function maketoc(toc)
+function maketoc()
+    toc = read_pluto_title(".")
 	
 	sort!(toc, by = x->x[1])
 	
