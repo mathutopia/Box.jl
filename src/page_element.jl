@@ -53,23 +53,25 @@ function section(str::Markdown.MD)
 	bt = strip(bt, ['\n','#',' '])
 	bt = replace(bt, [' ', ':','_'] => '-')
 
-	filename() = match(r".*\.jl",  basename(@__FILE__)).match
-	updirname() = split(@__DIR__, "\\")[end]
-	start_num(str) = match(r"[\d]+", str).match
-	fname(str) =  str[1:end-3]
+	filename(str) = match(r".*\.jl",str).match
 
-	fn = filename()
-	
+	fn = filename(basename(@__FILE__))
+	@show fn
 	
 	if occursin("backup", fn)
-		return Section(str)
+		return str
 	end
 
-	chapter = updirname()
-	section = start_num(fn)
+	chapter = split(@__DIR__, "\\")[end]
+	@show fn
+	section = match(r"[\d]+", fn).match
 	
 	
-	fn = fname(fn)
+	fn = fn[1:end-3]
+	
+	open("../toc.txt","a") do f
+           write(f,  chapter, ',',section, ',', bt, ',',fn,'\n')
+    end
 	
 	open("../toc.txt","a") do f
            write(f,  chapter, ',',section, ',', bt, ',',fn,'\n')
