@@ -3,15 +3,15 @@ using Markdown
 function _box(color::Symbol = :green, title::Union{String,Nothing} = nothing)
 	#@assert color in [:green, :yellow, :blue, :red]
 	function green(text)
-   		Markdown.MD(Markdown.Admonition("tip", ifelse(isnothing(title),"✍🏻️ 插播", title), [text])) # 绿色
+   		Markdown.MD(Markdown.Admonition("tip", ifelse(isnothing(title),"✍🏻️  插播", title), [text])) # 绿色
 	end
 
 	function yellow(text)
-		Markdown.MD(Markdown.Admonition("warning",ifelse(isnothing(title),"👀 注意", title),  [text])) # 黄色
+		Markdown.MD(Markdown.Admonition("warning",ifelse(isnothing(title),"👀  注意", title),  [text])) # 黄色
 	end
 
 	function blue(text)
-		Markdown.MD(Markdown.Admonition("hint", ifelse(isnothing(title),"👁️ 提示", title), [text])) # 蓝色
+		Markdown.MD(Markdown.Admonition("hint", ifelse(isnothing(title),"👁️  提示", title), [text])) # 蓝色
 	end
 
 	function red(text)

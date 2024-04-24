@@ -3,7 +3,7 @@ module Box
 # Write your package code here.
 
 include("boxs.jl")
-export box
+export box,hint
 
 include("page_element.jl")
 export timu, shiyan, renwu,section, fbox, biaoti,maketoc
